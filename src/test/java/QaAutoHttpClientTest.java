@@ -11,12 +11,12 @@ import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 
-public class QaAutoHttpTest extends BaseTest{
+public class QaAutoHttpClientTest extends BaseTest{
 
     @Test
     public void getTest() throws IOException {
         CloseableHttpClient client = HttpClients.createDefault();
-        ClassicHttpRequest getBrandsRequest = new HttpGet("https://qauto.forstudy.space/api/cars/brands");
+        ClassicHttpRequest getBrandsRequest = new HttpGet("https://qauto.forstudy.space/api/cars/brands;");
         ClassicHttpResponse response = client.execute(getBrandsRequest);
 
         SoftAssert softAssert = new SoftAssert();
